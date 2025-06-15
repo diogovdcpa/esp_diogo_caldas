@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zero Trust: O Novo Paradigma de Segurança | Blog de Cybersegurança</title>
+    <meta name="description" content="Entenda o conceito de Zero Trust, sua importância na segurança cibernética moderna e como implementar uma arquitetura de segurança baseada em confiança zero.">
+    <meta name="keywords" content="zero trust, segurança zero confiança, segurança cibernética, arquitetura de segurança, segurança moderna">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Zero Trust: O Novo Paradigma de Segurança">
+    <meta property="og:description" content="Entenda o conceito de Zero Trust e sua importância na segurança cibernética moderna.">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="pt_BR">
+    <link rel="canonical" href="https://diogocaldas.com.br/blog/zero-trust-security.html">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'cyber-blue': '#00d4ff',
+                        'cyber-dark': '#0a0a0a',
+                        'cyber-gray': '#1a1a1a',
+                        'cyber-accent': '#ff6b35'
+                    },
+                    fontFamily: {
+                        'tech': ['Orbitron', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-gradient-to-br from-cyber-dark via-gray-900 to-cyber-gray text-white font-sans">
+    <nav class="fixed top-0 w-full bg-black/80 backdrop-blur-sm z-50 border-b border-cyber-blue/20">
+        <div class="container mx-auto px-4 sm:px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="../index.html" class="text-2xl font-tech font-bold text-cyber-blue">
+                    <i class="fas fa-shield-alt mr-2"></i>DC
+                </a>
+                <!-- Menu desktop -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="../index.html" class="hover:text-cyber-blue transition-colors">Início</a>
+                    <a href="index.html" class="hover:text-cyber-blue transition-colors">Blog</a>
+                </div>
+                <!-- Botão hamburguer -->
+                <button id="menu-btn" class="md:hidden text-cyber-blue focus:outline-none text-2xl" aria-label="Abrir menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            <!-- Menu mobile -->
+            <div id="mobile-menu" class="md:hidden hidden flex-col mt-4 space-y-4 animate-fade-in">
+                <a href="../index.html" class="block hover:text-cyber-blue transition-colors">Início</a>
+                <a href="index.html" class="block hover:text-cyber-blue transition-colors">Blog</a>
+            </div>
+        </div>
+    </nav>
+    <script>
+        const btn = document.getElementById('menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+
+    <article class="container mx-auto px-4 sm:px-6 pt-32 pb-20">
+        <header class="max-w-4xl mx-auto mb-12">
+            <h1 class="text-4xl md:text-5xl font-tech font-bold mb-6 text-cyber-blue">Zero Trust: O Futuro da Segurança</h1>
+            <p class="text-xl text-gray-400">Entenda como o modelo Zero Trust revoluciona a segurança cibernética</p>
+            <div class="mt-4 text-gray-500">
+                <span><i class="far fa-calendar mr-2"></i>15 de Março, 2025</span>
+                <span class="ml-4"><i class="far fa-clock mr-2"></i>15 min de leitura</span>
+            </div>
+        </header>
+
+        <div class="max-w-4xl mx-auto prose prose-invert prose-lg px-0 sm:px-0">
+            <div class="bg-gradient-to-br from-cyber-dark to-gray-900 p-8 rounded-xl border border-cyber-blue/20">
+                <h2 class="text-2xl font-bold text-cyber-blue mb-4">O que é Zero Trust?</h2>
+                <p class="text-gray-300 mb-4">Zero Trust é um modelo de segurança que opera sob o princípio de "nunca confie, sempre verifique". Ele elimina a confiança implícita e valida continuamente cada etapa de uma interação digital.</p>
+
+                <h2 class="text-2xl font-bold text-cyber-blue mb-4">Princípios Fundamentais</h2>
+                <ul class="list-disc list-inside text-gray-300 mb-4">
+                    <li class="mb-2">Verificar explicitamente</li>
+                    <li class="mb-2">Usar acesso com privilégio mínimo</li>
+                    <li class="mb-2">Assumir violação</li>
+                    <li class="mb-2">Verificar continuamente</li>
+                    <li class="mb-2">Monitorar e analisar</li>
+                </ul>
+
+                <h2 class="text-2xl font-bold text-cyber-blue mb-4">Componentes Principais</h2>
+                <ul class="list-disc list-inside text-gray-300 mb-4">
+                    <li class="mb-2">Identidade e Acesso</li>
+                    <li class="mb-2">Micro-segmentação</li>
+                    <li class="mb-2">Prevenção de Perda de Dados</li>
+                    <li class="mb-2">Monitoramento Contínuo</li>
+                    <li class="mb-2">Automação de Segurança</li>
+                </ul>
+
+                <h2 class="text-2xl font-bold text-cyber-blue mb-4">Benefícios</h2>
+                <ul class="list-disc list-inside text-gray-300 mb-4">
+                    <li class="mb-2">Maior segurança</li>
+                    <li class="mb-2">Melhor visibilidade</li>
+                    <li class="mb-2">Controle granular</li>
+                    <li class="mb-2">Conformidade aprimorada</li>
+                    <li class="mb-2">Redução de riscos</li>
+                </ul>
+
+                <h2 class="text-2xl font-bold text-cyber-blue mb-4">Implementação</h2>
+                <p class="text-gray-300 mb-4">Para implementar Zero Trust, considere:</p>
+                <ul class="list-disc list-inside text-gray-300 mb-4">
+                    <li class="mb-2">Mapear a superfície de ataque</li>
+                    <li class="mb-2">Identificar fluxos de tráfego</li>
+                    <li class="mb-2">Criar política de acesso</li>
+                    <li class="mb-2">Monitorar e manter</li>
+                    <li class="mb-2">Automatizar processos</li>
+                </ul>
+
+                <h2 class="text-2xl font-bold text-cyber-blue mb-4">Desafios</h2>
+                <ul class="list-disc list-inside text-gray-300 mb-4">
+                    <li class="mb-2">Complexidade da implementação</li>
+                    <li class="mb-2">Custo inicial</li>
+                    <li class="mb-2">Resistência à mudança</li>
+                    <li class="mb-2">Integração com sistemas legados</li>
+                    <li class="mb-2">Treinamento de usuários</li>
+                </ul>
+
+                <h2 class="text-2xl font-bold text-cyber-blue mb-4">Conclusão</h2>
+                <p class="text-gray-300 mb-4">Zero Trust representa uma mudança fundamental na abordagem de segurança, focando na verificação contínua e no acesso mínimo necessário. Sua implementação pode significativamente melhorar a postura de segurança de uma organização.</p>
+            </div>
+        </div>
+    </article>
+
+    <footer class="bg-black py-8 border-t border-cyber-blue/20 mt-8">
+        <div class="container mx-auto px-4 sm:px-6 text-center">
+            <p class="text-gray-400">
+                © 2025 Diogo Caldas. Todos os direitos reservados.
+            </p>
+        </div>
+    </footer>
+</body>
+</html> 

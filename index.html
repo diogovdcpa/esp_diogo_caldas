@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Especialista em Cybersegurança no Pará | Analista Sênior em Belém</title>
+    <meta name="description" content="Especialista em Cybersegurança no Pará, com mais de 5 anos de experiência em proteção de dados, análise forense e automação de segurança em Belém e região.">
+    <meta name="keywords" content="cybersegurança Pará, segurança da informação Belém, analista de segurança Pará, especialista em cibersegurança Belém, proteção de dados Pará">
+    <meta name="geo.region" content="BR-PA">
+    <meta name="geo.placename" content="Belém">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Especialista em Cybersegurança no Pará | Analista Sênior">
+    <meta property="og:description" content="Especialista em Cybersegurança no Pará, com mais de 5 anos de experiência em proteção de dados e análise forense.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <link rel="canonical" href="https://diogocaldas.com.br">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'cyber-blue': '#00d4ff',
+                        'cyber-dark': '#0a0a0a',
+                        'cyber-gray': '#1a1a1a',
+                        'cyber-accent': '#ff6b35'
+                    },
+                    fontFamily: {
+                        'tech': ['Orbitron', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Adicionando preload para recursos críticos -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" as="style">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style">
+    
+    <style>
+        /* Apenas estilos essenciais que não podem ser feitos com Tailwind */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+
+        /* Menu mobile - necessário pois envolve transformações complexas */
+        @media (max-width: 768px) {
+            .mobile-menu {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(0, 0, 0, 0.95);
+                backdrop-filter: blur(10px);
+                z-index: 100;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                transform: translateX(-100%);
+                transition: transform 0.3s ease-in-out;
+                visibility: hidden;
+            }
+
+            .mobile-menu.active {
+                transform: translateX(0);
+                visibility: visible;
+            }
+
+            .mobile-menu a {
+                opacity: 0;
+                transform: translateY(20px);
+                transition: all 0.3s ease;
+            }
+
+            .mobile-menu.active a {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            .mobile-menu a:nth-child(1) { transition-delay: 0.1s; }
+            .mobile-menu a:nth-child(2) { transition-delay: 0.2s; }
+            .mobile-menu a:nth-child(3) { transition-delay: 0.3s; }
+            .mobile-menu a:nth-child(4) { transition-delay: 0.4s; }
+            .mobile-menu a:nth-child(5) { transition-delay: 0.5s; }
+            .mobile-menu a:nth-child(6) { transition-delay: 0.6s; }
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-cyber-dark via-gray-900 to-cyber-gray text-white font-sans">
+    
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-black/80 backdrop-blur-sm z-50 border-b border-cyber-blue/20">
+        <div class="container mx-auto px-4 sm:px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-tech font-bold text-cyber-blue">
+                    <i class="fas fa-shield-alt mr-2"></i>DC
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="hover:text-cyber-blue transition-colors">Início</a>
+                    <a href="#about" class="hover:text-cyber-blue transition-colors">Sobre</a>
+                    <a href="#expertise" class="hover:text-cyber-blue transition-colors">Expertise</a>
+                    <a href="#experience" class="hover:text-cyber-blue transition-colors">Experiência</a>
+                    <a href="#contact" class="hover:text-cyber-blue transition-colors">Contato</a>
+                    <a href="blog/index.html" class="hover:text-cyber-blue transition-colors">Blog</a>
+                </div>
+                <button id="menu-btn" class="md:hidden text-cyber-blue focus:outline-none text-2xl" aria-label="Abrir menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Menu Mobile -->
+    <div id="mobile-menu" class="mobile-menu md:hidden">
+        <a href="#home" class="text-xl sm:text-2xl text-white hover:text-cyber-blue transition-colors py-3 px-6 w-full text-center">Início</a>
+        <a href="#about" class="text-xl sm:text-2xl text-white hover:text-cyber-blue transition-colors py-3 px-6 w-full text-center">Sobre</a>
+        <a href="#expertise" class="text-xl sm:text-2xl text-white hover:text-cyber-blue transition-colors py-3 px-6 w-full text-center">Expertise</a>
+        <a href="#experience" class="text-xl sm:text-2xl text-white hover:text-cyber-blue transition-colors py-3 px-6 w-full text-center">Experiência</a>
+        <a href="#contact" class="text-xl sm:text-2xl text-white hover:text-cyber-blue transition-colors py-3 px-6 w-full text-center">Contato</a>
+        <a href="blog/index.html" class="text-xl sm:text-2xl text-white hover:text-cyber-blue transition-colors py-3 px-6 w-full text-center">Blog</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-[calc(100vh-4rem)] flex items-center justify-center relative overflow-hidden pt-16 md:pt-0">
+        <div class="absolute inset-0 bg-gradient-to-r from-cyber-blue/10 to-cyber-accent/10 animate-pulse"></div>
+        <div class="container mx-auto px-4 sm:px-6 text-center relative z-10">
+            <div class="mb-8">
+                <div class="w-32 h-32 sm:w-40 sm:h-40 mx-auto mb-8 rounded-full bg-gradient-to-r from-cyber-blue to-cyber-accent p-1">
+                    <div class="w-full h-full rounded-full bg-cyber-dark flex items-center justify-center">
+                        <i class="fas fa-user-shield text-4xl sm:text-6xl text-cyber-blue"></i>
+                    </div>
+                </div>
+                <h1 class="text-4xl sm:text-5xl md:text-7xl font-tech font-black mb-4 bg-gradient-to-r from-cyber-blue to-white bg-clip-text text-transparent">
+                    Diogo Caldas
+                </h1>
+                <h2 class="text-xl sm:text-2xl md:text-3xl text-gray-300 mb-6">
+                    Especialista em Cybersegurança no Pará
+                </h2>
+                <p class="text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
+                    Protegendo empresas e pessoas contra ameaças digitais em Belém e região através de soluções inovadoras, 
+                    automação inteligente e análise forense computacional avançada.
+                </p>
+            </div>
+
+            <!-- Stats -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8 mt-12 sm:mt-16">
+                <div class="text-center p-4">
+                    <div class="text-2xl sm:text-3xl font-tech font-bold text-cyber-blue mb-2">5+</div>
+                    <div class="text-sm sm:text-base text-gray-400">Anos de Experiência</div>
+                </div>
+                <div class="text-center p-4">
+                    <div class="text-2xl sm:text-3xl font-tech font-bold text-cyber-blue mb-2">50+</div>
+                    <div class="text-sm sm:text-base text-gray-400">Integrações Desenvolvidas</div>
+                </div>
+                <div class="text-center p-4">
+                    <div class="text-2xl sm:text-3xl font-tech font-bold text-cyber-blue mb-2">100%</div>
+                    <div class="text-sm sm:text-base text-gray-400">Incidentes Resolvidos</div>
+                </div>
+                <div class="text-center p-4">
+                    <div class="text-2xl sm:text-3xl font-tech font-bold text-cyber-blue mb-2">24/7</div>
+                    <div class="text-sm sm:text-base text-gray-400">Monitoramento</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-12 sm:py-20 bg-cyber-gray/50">
+        <div class="container mx-auto px-4 sm:px-6">
+            <div class="text-center mb-12 sm:mb-16">
+                <h2 class="text-3xl sm:text-4xl font-tech font-bold mb-4 text-cyber-blue">Sobre Mim</h2>
+                <p class="text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto">
+                    Profissional altamente qualificado em cybersegurança com formação multidisciplinar 
+                    e experiência prática em proteção de infraestruturas críticas no estado do Pará.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 sm:gap-12 items-start">
+                <div>
+                    <h3 class="text-xl sm:text-2xl font-bold mb-6 text-cyber-blue">
+                        <i class="fas fa-graduation-cap mr-3"></i>Formação Acadêmica
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="bg-cyber-dark/50 p-4 sm:p-6 rounded-lg border-l-4 border-cyber-blue">
+                            <h4 class="font-bold text-white">Pós-Graduação Lato Sensu</h4>
+                            <ul class="text-gray-300 mt-2 space-y-1 text-sm sm:text-base">
+                                <li>• Segurança da Informação</li>
+                                <li>• Engenharia de Software</li>
+                                <li>• Perícia Forense Computacional</li>
+                                <li>• Gestão Estratégica de Negócios</li>
+                            </ul>
+                        </div>
+                        <div class="bg-cyber-dark/50 p-4 sm:p-6 rounded-lg border-l-4 border-cyber-accent">
+                            <h4 class="font-bold text-white">Graduação</h4>
+                            <ul class="text-gray-300 mt-2 space-y-1 text-sm sm:text-base">
+                                <li>• Bacharelado em Sistemas de Informação</li>
+                                <li>• Licenciatura em Física</li>
+                                <li>• Superior Sequencial em Segurança Pública</li>
+                                <li>• Técnico em Telecomunicações</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-xl sm:text-2xl font-bold mb-6 text-cyber-blue">
+                        <i class="fas fa-cogs mr-3"></i>Competências Técnicas
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="bg-cyber-dark/50 p-4 sm:p-6 rounded-lg">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="font-semibold text-sm sm:text-base">Análise de Ameaças</span>
+                                <span class="text-cyber-blue text-sm sm:text-base">95%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-2">
+                                <div class="bg-gradient-to-r from-cyber-blue to-cyan-400 h-2 rounded-full" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="bg-cyber-dark/50 p-4 sm:p-6 rounded-lg">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="font-semibold text-sm sm:text-base">Automação de Segurança</span>
+                                <span class="text-cyber-blue text-sm sm:text-base">92%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-2">
+                                <div class="bg-gradient-to-r from-cyber-blue to-cyan-400 h-2 rounded-full" style="width: 92%"></div>
+                            </div>
+                        </div>
+                        <div class="bg-cyber-dark/50 p-4 sm:p-6 rounded-lg">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="font-semibold text-sm sm:text-base">Resposta a Incidentes</span>
+                                <span class="text-cyber-blue text-sm sm:text-base">98%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-2">
+                                <div class="bg-gradient-to-r from-cyber-blue to-cyan-400 h-2 rounded-full" style="width: 98%"></div>
+                            </div>
+                        </div>
+                        <div class="bg-cyber-dark/50 p-4 sm:p-6 rounded-lg">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="font-semibold text-sm sm:text-base">Inteligência Artificial</span>
+                                <span class="text-cyber-blue text-sm sm:text-base">88%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-2">
+                                <div class="bg-gradient-to-r from-cyber-blue to-cyan-400 h-2 rounded-full" style="width: 88%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expertise Section -->
+    <section id="expertise" class="py-12 sm:py-20">
+        <div class="container mx-auto px-4 sm:px-6">
+            <div class="text-center mb-12 sm:mb-16">
+                <h2 class="text-3xl sm:text-4xl font-tech font-bold mb-4 text-cyber-blue">Áreas de Expertise</h2>
+                <p class="text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto">
+                    Especialização em tecnologias avançadas de cybersegurança e desenvolvimento de soluções inovadoras.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6 sm:gap-8">
+                <div class="bg-gradient-to-br from-cyber-dark to-gray-900 p-6 sm:p-8 rounded-xl border border-cyber-blue/20 hover:border-cyber-blue/50 transition-all duration-300 transform hover:scale-105">
+                    <div class="text-3xl sm:text-4xl text-cyber-blue mb-4">
+                        <i class="fas fa-shield-virus"></i>
+                    </div>
+                    <h3 class="text-lg sm:text-xl font-bold mb-4 text-white">Análise & Resposta a Incidentes</h3>
+                    <p class="text-gray-400 mb-4 text-sm sm:text-base">Investigação forense, tratamento de incidentes de segurança e implementação de contramedidas eficazes.</p>
+                    <ul class="text-sm text-gray-300 space-y-1">
+                        <li>• Análise forense computacional</li>
+                        <li>• Resposta a incidentes 24/7</li>
+                        <li>• Investigação de ameaças</li>
+                    </ul>
+                </div>
+
+                <div class="bg-gradient-to-br from-cyber-dark to-gray-900 p-6 sm:p-8 rounded-xl border border-cyber-blue/20 hover:border-cyber-blue/50 transition-all duration-300 transform hover:scale-105">
+                    <div class="text-3xl sm:text-4xl text-cyber-blue mb-4">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3 class="text-lg sm:text-xl font-bold mb-4 text-white">Automação & IA</h3>
+                    <p class="text-gray-400 mb-4 text-sm sm:text-base">Desenvolvimento de agentes de IA para correlação de alertas e automação de fluxos de segurança.</p>
+                    <ul class="text-sm text-gray-300 space-y-1">
+                        <li>• Agentes de IA para correlação</li>
+                        <li>• Automação de workflows</li>
+                        <li>• Enriquecimento de inteligência</li>
+                    </ul>
+                </div>
+
+                <div class="bg-gradient-to-br from-cyber-dark to-gray-900 p-6 sm:p-8 rounded-xl border border-cyber-blue/20 hover:border-cyber-blue/50 transition-all duration-300 transform hover:scale-105">
+                    <div class="text-3xl sm:text-4xl text-cyber-blue mb-4">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3 class="text-lg sm:text-xl font-bold mb-4 text-white">Integrações & Modelagem</h3>
+                    <p class="text-gray-400 mb-4 text-sm sm:text-base">Desenvolvimento de integrações para soluções de segurança e modelagem de ameaças avançadas.</p>
+                    <ul class="text-sm text-gray-300 space-y-1">
+                        <li>• Integrações multi-vendor</li>
+                        <li>• Modelagem de ameaças</li>
+                        <li>• Implantação de soluções</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-12 sm:py-20 bg-cyber-gray/50">
+        <div class="container mx-auto px-4 sm:px-6">
+            <div class="text-center mb-12 sm:mb-16">
+                <h2 class="text-3xl sm:text-4xl font-tech font-bold mb-4 text-cyber-blue">Experiência Profissional</h2>
+                <p class="text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto">
+                    Histórico comprovado de sucesso em projetos de cybersegurança de grande escala.
+                </p>
+            </div>
+
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-gradient-to-r from-cyber-dark to-gray-900 p-6 sm:p-8 rounded-xl border border-cyber-blue/30 mb-8">
+                    <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-6">
+                        <div class="mb-4 sm:mb-0">
+                            <h3 class="text-xl sm:text-2xl font-bold text-white mb-2">Analista de Cybersegurança</h3>
+                            <p class="text-cyber-blue font-semibold">Posição Atual</p>
+                        </div>
+                        <div class="text-left sm:text-right">
+                            <div class="bg-cyber-blue/20 px-4 py-2 rounded-lg inline-block">
+                                <span class="text-cyber-blue font-semibold">2020 - Presente</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="font-bold text-white mb-3 text-sm sm:text-base">Responsabilidades Principais:</h4>
+                            <ul class="text-gray-300 space-y-2 text-sm sm:text-base">
+                                <li>• Desenvolvimento de integrações para soluções de segurança</li>
+                                <li>• Criação de fluxos de automação para resposta a incidentes</li>
+                                <li>• Tratamento e investigação de incidentes de segurança</li>
+                                <li>• Modelagem de ameaças e análise de riscos</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white mb-3 text-sm sm:text-base">Conquistas Destacadas:</h4>
+                            <ul class="text-gray-300 space-y-2 text-sm sm:text-base">
+                                <li>• Implementação de soluções de segurança avançadas</li>
+                                <li>• Desenvolvimento de agentes de IA para correlação de alertas</li>
+                                <li>• Enriquecimento de inteligência de ameaças</li>
+                                <li>• Integrações com múltiplos vendors de segurança</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-r from-gray-900 to-cyber-dark p-6 rounded-xl border border-cyber-accent/30">
+                    <h4 class="text-lg sm:text-xl font-bold text-cyber-accent mb-4">
+                        <i class="fas fa-trophy mr-2"></i>Realizações Técnicas
+                    </h4>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 text-center">
+                        <div class="bg-cyber-dark/50 p-4 rounded-lg">
+                            <div class="text-xl sm:text-2xl font-tech font-bold text-cyber-accent mb-1">50+</div>
+                            <div class="text-gray-400 text-xs sm:text-sm">Integrações Desenvolvidas</div>
+                        </div>
+                        <div class="bg-cyber-dark/50 p-4 rounded-lg">
+                            <div class="text-xl sm:text-2xl font-tech font-bold text-cyber-accent mb-1">15+</div>
+                            <div class="text-gray-400 text-xs sm:text-sm">Vendors Integrados</div>
+                        </div>
+                        <div class="bg-cyber-dark/50 p-4 rounded-lg col-span-2 sm:col-span-1">
+                            <div class="text-xl sm:text-2xl font-tech font-bold text-cyber-accent mb-1">100%</div>
+                            <div class="text-gray-400 text-xs sm:text-sm">Taxa de Sucesso</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-12 sm:py-20">
+        <div class="container mx-auto px-4 sm:px-6">
+            <div class="text-center mb-12 sm:mb-16">
+                <h2 class="text-3xl sm:text-4xl font-tech font-bold mb-4 text-cyber-blue">Vamos Conversar</h2>
+                <p class="text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto">
+                    Pronto para fortalecer a segurança da sua empresa no Pará? Entre em contato para discutir como posso ajudar.
+                </p>
+            </div>
+
+            <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 sm:gap-12">
+                <div>
+                    <h3 class="text-xl sm:text-2xl font-bold mb-6 text-white">Informações de Contato</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-cyber-blue/20 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-envelope text-cyber-blue"></i>
+                            </div>
+                            <div>
+                                <p class="text-gray-400 text-sm sm:text-base">Email</p>
+                                <p class="text-white font-semibold text-sm sm:text-base">diogo.cyber@protonmail.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-cyber-blue/20 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-phone text-cyber-blue"></i>
+                            </div>
+                            <div>
+                                <p class="text-gray-400 text-sm sm:text-base">Telefone</p>
+                                <p class="text-white font-semibold text-sm sm:text-base">+55 (93) 99159-0823</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-cyber-blue/20 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fab fa-linkedin text-cyber-blue"></i>
+                            </div>
+                            <div>
+                                <p class="text-gray-400 text-sm sm:text-base">LinkedIn</p>
+                                <p class="text-white font-semibold text-sm sm:text-base">https://www.linkedin.com/in/diogovdcpa/</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <h4 class="text-lg sm:text-xl font-bold mb-4 text-white">Disponibilidade</h4>
+                        <div class="bg-cyber-dark/50 p-4 rounded-lg border border-cyber-blue/20">
+                            <p class="text-gray-300 mb-2 text-sm sm:text-base">
+                                <i class="fas fa-clock text-cyber-blue mr-2"></i>
+                                Disponível para projetos remotos e presenciais
+                            </p>
+                            <p class="text-gray-300 text-sm sm:text-base">
+                                <i class="fas fa-calendar text-cyber-blue mr-2"></i>
+                                Resposta em até 24 horas
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-xl sm:text-2xl font-bold mb-6 text-white">Envie uma Mensagem</h3>
+                    <form class="space-y-4 sm:space-y-6 action="mailto:diogo.cyber@proton.com" method="POST" enctype="text/plain">
+                        <div>
+                            <label class="block text-gray-400 mb-2 text-sm sm:text-base">Nome</label>
+                            <input type="text" class="w-full px-4 py-3 bg-cyber-dark/50 border border-gray-600 rounded-lg focus:border-cyber-blue focus:outline-none text-white text-sm sm:text-base">
+                        </div>
+                        <div>
+                            <label class="block text-gray-400 mb-2 text-sm sm:text-base">Email</label>
+                            <input type="email" class="w-full px-4 py-3 bg-cyber-dark/50 border border-gray-600 rounded-lg focus:border-cyber-blue focus:outline-none text-white text-sm sm:text-base">
+                        </div>
+                        <div>
+                            <label class="block text-gray-400 mb-2 text-sm sm:text-base">Empresa</label>
+                            <input type="text" class="w-full px-4 py-3 bg-cyber-dark/50 border border-gray-600 rounded-lg focus:border-cyber-blue focus:outline-none text-white text-sm sm:text-base">
+                        </div>
+                        <div>
+                            <label class="block text-gray-400 mb-2 text-sm sm:text-base">Mensagem</label>
+                            <textarea rows="4" class="w-full px-4 py-3 bg-cyber-dark/50 border border-gray-600 rounded-lg focus:border-cyber-blue focus:outline-none text-white resize-none text-sm sm:text-base"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-gradient-to-r from-cyber-blue to-cyan-400 hover:from-cyan-400 hover:to-cyber-blue text-black px-6 py-3 sm:px-8 sm:py-4 rounded-lg font-bold text-base sm:text-lg transition-all duration-300 transform hover:scale-105">
+                            <i class="fas fa-paper-plane mr-2"></i>Enviar Mensagem
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-8 border-t border-cyber-blue/20">
+        <div class="container mx-auto px-4 sm:px-6 text-center">
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="#" class="text-gray-400 hover:text-cyber-blue transition-colors">
+                    <i class="fab fa-linkedin text-xl sm:text-2xl"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-cyber-blue transition-colors">
+                    <i class="fab fa-github text-xl sm:text-2xl"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-cyber-blue transition-colors">
+                    <i class="fab fa-twitter text-xl sm:text-2xl"></i>
+                </a>
+            </div>
+            <p class="text-gray-400 text-sm sm:text-base">
+                © 2025 Diogo Caldas. Todos os direitos reservados.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollTop" class="fixed bottom-8 right-8 bg-cyber-blue hover:bg-cyan-400 text-black p-3 rounded-full shadow-lg transition-all duration-300 transform hover:scale-110 opacity-0 invisible">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Adicionando schema.org markup para SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Diogo Caldas",
+        "jobTitle": "Especialista em Cybersegurança",
+        "worksFor": {
+            "@type": "Organization",
+            "name": "Consultoria em Cybersegurança"
+        },
+        "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "PA",
+            "addressLocality": "Belém",
+            "addressCountry": "BR"
+        },
+        "telephone": "+55 (93) 99159-0823",
+        "email": "diogo.cyber@protonmail.com",
+        "url": "https://diogocaldas.com.br",
+        "sameAs": [
+            "https://www.linkedin.com/in/diogovdcpa/"
+        ]
+    }
+    </script>
+
+    <!-- Melhorando o script de performance -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scrolling
+            const scrollLinks = document.querySelectorAll('a[href^="#"]');
+            scrollLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                        // Fechar menu mobile ao clicar em um link
+                        const mobileMenu = document.getElementById('mobile-menu');
+                        const menuBtn = document.getElementById('menu-btn');
+                        if (mobileMenu.classList.contains('active')) {
+                            mobileMenu.classList.remove('active');
+                            menuBtn.classList.remove('active');
+                            document.body.style.overflow = '';
+                        }
+                    }
+                });
+            });
+
+            // Scroll to top
+            const scrollTopBtn = document.getElementById('scrollTop');
+            let scrollTimeout;
+            
+            window.addEventListener('scroll', () => {
+                if (scrollTimeout) {
+                    window.cancelAnimationFrame(scrollTimeout);
+                }
+                
+                scrollTimeout = window.requestAnimationFrame(() => {
+                    if (window.pageYOffset > 300) {
+                        scrollTopBtn.classList.remove('opacity-0', 'invisible');
+                    } else {
+                        scrollTopBtn.classList.add('opacity-0', 'invisible');
+                    }
+                });
+            });
+
+            // Mobile menu
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            if (menuBtn && mobileMenu) {
+                menuBtn.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('active');
+                    menuBtn.classList.toggle('active');
+                    document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+                });
+
+                // Fechar menu ao clicar fora
+                document.addEventListener('click', (e) => {
+                    if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target) && mobileMenu.classList.contains('active')) {
+                        mobileMenu.classList.remove('active');
+                        menuBtn.classList.remove('active');
+                        document.body.style.overflow = '';
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

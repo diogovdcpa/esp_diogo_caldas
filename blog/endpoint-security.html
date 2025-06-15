@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O que é Endpoint Security? Guia Completo para Proteção de Dispositivos | Blog de Cybersegurança</title>
+    <meta name="description" content="Aprenda tudo sobre Endpoint Security, sua importância na proteção de dispositivos e como implementar soluções eficazes de segurança em endpoints.">
+    <meta name="keywords" content="endpoint security, segurança de endpoints, proteção de dispositivos, segurança da informação, cybersegurança">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="O que é Endpoint Security? Guia Completo para Proteção de Dispositivos">
+    <meta property="og:description" content="Aprenda tudo sobre Endpoint Security e sua importância na proteção de dispositivos.">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="pt_BR">
+    <link rel="canonical" href="https://diogocaldas.com.br/blog/endpoint-security.html">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'cyber-blue': '#00d4ff',
+                        'cyber-dark': '#0a0a0a',
+                        'cyber-gray': '#1a1a1a',
+                        'cyber-accent': '#ff6b35'
+                    },
+                    fontFamily: {
+                        'tech': ['Orbitron', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Menu mobile */
+        @media (max-width: 768px) {
+            .mobile-menu {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(0, 0, 0, 0.95);
+                backdrop-filter: blur(10px);
+                z-index: 100;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                transform: translateX(-100%);
+                transition: transform 0.3s ease-in-out;
+            }
+
+            .mobile-menu.active {
+                transform: translateX(0);
+            }
+
+            .mobile-menu a {
+                font-size: 1.5rem;
+                margin: 1rem 0;
+                opacity: 0;
+                transform: translateY(20px);
+                transition: all 0.3s ease;
+            }
+
+            .mobile-menu.active a {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            .mobile-menu a:nth-child(1) { transition-delay: 0.1s; }
+            .mobile-menu a:nth-child(2) { transition-delay: 0.2s; }
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-cyber-dark via-gray-900 to-cyber-gray text-white font-sans">
+    <nav class="fixed top-0 w-full bg-black/80 backdrop-blur-sm z-50 border-b border-cyber-blue/20">
+        <div class="container mx-auto px-4 sm:px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="../index.html" class="text-2xl font-tech font-bold text-cyber-blue">
+                    <i class="fas fa-shield-alt mr-2"></i>DC
+                </a>
+                <!-- Menu desktop -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="../index.html" class="hover:text-cyber-blue transition-colors">Início</a>
+                    <a href="index.html" class="hover:text-cyber-blue transition-colors">Blog</a>
+                </div>
+                <!-- Botão hamburguer -->
+                <button id="menu-btn" class="md:hidden text-cyber-blue focus:outline-none text-2xl" aria-label="Abrir menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Menu Mobile -->
+    <div id="mobile-menu" class="mobile-menu md:hidden">
+        <a href="../index.html" class="hover:text-cyber-blue transition-colors">Início</a>
+        <a href="index.html" class="hover:text-cyber-blue transition-colors">Blog</a>
+    </div>
+
+    <article class="container mx-auto px-4 sm:px-6 pt-32 pb-20">
+        <header class="max-w-4xl mx-auto mb-12">
+            <h1 class="text-4xl md:text-5xl font-tech font-bold mb-6 text-cyber-blue">O que é Endpoint Security?</h1>
+            <p class="text-xl text-gray-400">Guia completo sobre proteção de dispositivos e sua importância na segurança corporativa</p>
+            <div class="mt-4 text-gray-500">
+                <span><i class="far fa-calendar mr-2"></i>15 de Março, 2025</span>
+                <span class="ml-4"><i class="far fa-clock mr-2"></i>10 min de leitura</span>
+            </div>
+        </header>
+
+        <div class="max-w-4xl mx-auto prose prose-invert prose-lg px-0 sm:px-0">
+            <div class="bg-gradient-to-br from-cyber-dark to-gray-900 p-8 rounded-xl border border-cyber-blue/20">
+                <h2 class="text-2xl font-bold text-cyber-blue mb-4">O que é Endpoint Security?</h2>
+                <p class="text-gray-300 mb-4">Endpoint Security é uma abordagem de segurança cibernética que protege dispositivos individuais (endpoints) como computadores, smartphones e tablets contra ameaças digitais. Esta proteção é essencial em um mundo onde os dispositivos são constantemente alvos de ataques maliciosos.</p>
+
+                <h2 class="text-2xl font-bold text-cyber-blue mb-4">Componentes Principais</h2>
+                <ul class="list-disc list-inside text-gray-300 mb-4">
+                    <li class="mb-2">Antivírus e Antimalware</li>
+                    <li class="mb-2">Firewall de Host</li>
+                    <li class="mb-2">Controle de Acesso</li>
+                    <li class="mb-2">Prevenção de Perda de Dados (DLP)</li>
+                    <li class="mb-2">Gerenciamento de Patches</li>
+                </ul>
+
+                <h2 class="text-2xl font-bold text-cyber-blue mb-4">Benefícios da Endpoint Security</h2>
+                <p class="text-gray-300 mb-4">A implementação de uma solução robusta de Endpoint Security oferece diversos benefícios:</p>
+                <ul class="list-disc list-inside text-gray-300 mb-4">
+                    <li class="mb-2">Proteção contra malware e ransomware</li>
+                    <li class="mb-2">Controle de acesso a dispositivos</li>
+                    <li class="mb-2">Monitoramento em tempo real</li>
+                    <li class="mb-2">Conformidade com regulamentações</li>
+                    <li class="mb-2">Redução de riscos de segurança</li>
+                </ul>
+
+                <h2 class="text-2xl font-bold text-cyber-blue mb-4">Melhores Práticas</h2>
+                <p class="text-gray-300 mb-4">Para maximizar a eficácia da Endpoint Security, considere as seguintes práticas:</p>
+                <ul class="list-disc list-inside text-gray-300 mb-4">
+                    <li class="mb-2">Manter todos os dispositivos atualizados</li>
+                    <li class="mb-2">Implementar autenticação multifator</li>
+                    <li class="mb-2">Realizar backups regulares</li>
+                    <li class="mb-2">Treinar usuários em segurança</li>
+                    <li class="mb-2">Monitorar e analisar logs de segurança</li>
+                </ul>
+
+                <h2 class="text-2xl font-bold text-cyber-blue mb-4">Conclusão</h2>
+                <p class="text-gray-300 mb-4">A Endpoint Security é um componente fundamental da estratégia de segurança de qualquer organização. Com a crescente sofisticação das ameaças cibernéticas, é essencial implementar soluções robustas de proteção de endpoints para garantir a segurança dos dispositivos e dados.</p>
+            </div>
+        </div>
+    </article>
+
+    <footer class="bg-black py-8 border-t border-cyber-blue/20 mt-8">
+        <div class="container mx-auto px-4 sm:px-6 text-center">
+            <p class="text-gray-400">
+                © 2025 Diogo Caldas. Todos os direitos reservados.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            if (menuBtn && mobileMenu) {
+                menuBtn.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('active');
+                    document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+                });
+
+                // Fechar menu ao clicar fora
+                document.addEventListener('click', (e) => {
+                    if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target) && mobileMenu.classList.contains('active')) {
+                        mobileMenu.classList.remove('active');
+                        document.body.style.overflow = '';
+                    }
+                });
+
+                // Fechar menu ao clicar em um link
+                const menuLinks = mobileMenu.querySelectorAll('a');
+                menuLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.remove('active');
+                        document.body.style.overflow = '';
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html> 

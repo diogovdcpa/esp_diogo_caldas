@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog de Cybersegurança | Artigos e Guias sobre Segurança da Informação</title>
+    <meta name="description" content="Blog especializado em cybersegurança com artigos sobre Endpoint Security, EDR, Firewall, SIEM, Zero Trust e outras tecnologias de segurança da informação.">
+    <meta name="keywords" content="blog cybersegurança, segurança da informação, artigos segurança, guias segurança, tecnologia segurança">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Blog de Cybersegurança | Artigos e Guias">
+    <meta property="og:description" content="Blog especializado em cybersegurança com artigos e guias sobre segurança da informação.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <link rel="canonical" href="https://diogocaldas.com.br/blog">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'cyber-blue': '#00d4ff',
+                        'cyber-dark': '#0a0a0a',
+                        'cyber-gray': '#1a1a1a',
+                        'cyber-accent': '#ff6b35'
+                    },
+                    fontFamily: {
+                        'tech': ['Orbitron', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Menu mobile */
+        @media (max-width: 768px) {
+            .mobile-menu {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(0, 0, 0, 0.95);
+                backdrop-filter: blur(10px);
+                z-index: 100;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                transform: translateX(-100%);
+                transition: transform 0.3s ease-in-out;
+            }
+
+            .mobile-menu.active {
+                transform: translateX(0);
+            }
+
+            .mobile-menu a {
+                font-size: 1.5rem;
+                margin: 1rem 0;
+                opacity: 0;
+                transform: translateY(20px);
+                transition: all 0.3s ease;
+            }
+
+            .mobile-menu.active a {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            .mobile-menu a:nth-child(1) { transition-delay: 0.1s; }
+            .mobile-menu a:nth-child(2) { transition-delay: 0.2s; }
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-cyber-dark via-gray-900 to-cyber-gray text-white font-sans">
+    <nav class="fixed top-0 w-full bg-black/80 backdrop-blur-sm z-50 border-b border-cyber-blue/20">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="../index.html" class="text-2xl font-tech font-bold text-cyber-blue">
+                    <i class="fas fa-shield-alt mr-2"></i>DC
+                </a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="../index.html" class="hover:text-cyber-blue transition-colors">Início</a>
+                    <a href="index.html" class="hover:text-cyber-blue transition-colors">Blog</a>
+                </div>
+                <button id="menu-btn" class="md:hidden text-cyber-blue focus:outline-none text-2xl" aria-label="Abrir menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Menu Mobile -->
+    <div id="mobile-menu" class="mobile-menu md:hidden">
+        <a href="../index.html" class="hover:text-cyber-blue transition-colors">Início</a>
+        <a href="index.html" class="hover:text-cyber-blue transition-colors">Blog</a>
+    </div>
+
+    <main class="container mx-auto px-6 pt-32 pb-20">
+        <header class="max-w-4xl mx-auto mb-16 text-center">
+            <h1 class="text-4xl md:text-5xl font-tech font-bold mb-6 text-cyber-blue">Blog de Cybersegurança</h1>
+            <p class="text-xl text-gray-400">Artigos e guias sobre segurança da informação e tecnologias de proteção</p>
+        </header>
+
+        <div class="max-w-4xl mx-auto grid gap-8">
+            <article class="bg-gradient-to-br from-cyber-dark to-gray-900 p-8 rounded-xl border border-cyber-blue/20 hover:border-cyber-blue/50 transition-all duration-300">
+                <div class="flex items-start justify-between">
+                    <div>
+                        <h2 class="text-2xl font-bold mb-4 text-cyber-blue">
+                            <a href="zero-trust-security.html" class="hover:text-cyan-400 transition-colors">
+                                Zero Trust: O Novo Paradigma de Segurança
+                            </a>
+                        </h2>
+                        <p class="text-gray-400 mb-4">Entenda como o modelo Zero Trust revoluciona a segurança cibernética moderna e por que é considerado o futuro da proteção digital.</p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <span><i class="far fa-calendar mr-2"></i>15 de Março, 2025</span>
+                            <span class="mx-4">•</span>
+                            <span><i class="far fa-clock mr-2"></i>15 min de leitura</span>
+                        </div>
+                    </div>
+                    <div class="text-4xl text-cyber-blue">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                </div>
+            </article>
+
+            <article class="bg-gradient-to-br from-cyber-dark to-gray-900 p-8 rounded-xl border border-cyber-blue/20 hover:border-cyber-blue/50 transition-all duration-300">
+                <div class="flex items-start justify-between">
+                    <div>
+                        <h2 class="text-2xl font-bold mb-4 text-cyber-blue">
+                            <a href="siem-security.html" class="hover:text-cyan-400 transition-colors">
+                                SIEM: Monitoramento Inteligente de Segurança
+                            </a>
+                        </h2>
+                        <p class="text-gray-400 mb-4">Aprenda sobre SIEM e como essa tecnologia revoluciona o monitoramento e análise de eventos de segurança em sua organização.</p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <span><i class="far fa-calendar mr-2"></i>15 de Março, 2025</span>
+                            <span class="mx-4">•</span>
+                            <span><i class="far fa-clock mr-2"></i>12 min de leitura</span>
+                        </div>
+                    </div>
+                    <div class="text-4xl text-cyber-blue">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                </div>
+            </article>
+
+            <article class="bg-gradient-to-br from-cyber-dark to-gray-900 p-8 rounded-xl border border-cyber-blue/20 hover:border-cyber-blue/50 transition-all duration-300">
+                <div class="flex items-start justify-between">
+                    <div>
+                        <h2 class="text-2xl font-bold mb-4 text-cyber-blue">
+                            <a href="firewall-security.html" class="hover:text-cyan-400 transition-colors">
+                                Firewall: Proteção Essencial para Redes
+                            </a>
+                        </h2>
+                        <p class="text-gray-400 mb-4">Descubra como os firewalls protegem sua rede contra ameaças cibernéticas e quais são os tipos mais eficazes para sua organização.</p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <span><i class="far fa-calendar mr-2"></i>15 de Março, 2025</span>
+                            <span class="mx-4">•</span>
+                            <span><i class="far fa-clock mr-2"></i>15 min de leitura</span>
+                        </div>
+                    </div>
+                    <div class="text-4xl text-cyber-blue">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                </div>
+            </article>
+
+            <article class="bg-gradient-to-br from-cyber-dark to-gray-900 p-8 rounded-xl border border-cyber-blue/20 hover:border-cyber-blue/50 transition-all duration-300">
+                <div class="flex items-start justify-between">
+                    <div>
+                        <h2 class="text-2xl font-bold mb-4 text-cyber-blue">
+                            <a href="edr-security.html" class="hover:text-cyan-400 transition-colors">
+                                EDR: Detecção e Resposta em Endpoints
+                            </a>
+                        </h2>
+                        <p class="text-gray-400 mb-4">Entenda como a tecnologia EDR revoluciona a segurança cibernética moderna e protege seus endpoints contra ameaças avançadas.</p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <span><i class="far fa-calendar mr-2"></i>15 de Março, 2025</span>
+                            <span class="mx-4">•</span>
+                            <span><i class="far fa-clock mr-2"></i>12 min de leitura</span>
+                        </div>
+                    </div>
+                    <div class="text-4xl text-cyber-blue">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                </div>
+            </article>
+
+            <article class="bg-gradient-to-br from-cyber-dark to-gray-900 p-8 rounded-xl border border-cyber-blue/20 hover:border-cyber-blue/50 transition-all duration-300">
+                <div class="flex items-start justify-between">
+                    <div>
+                        <h2 class="text-2xl font-bold mb-4 text-cyber-blue">
+                            <a href="endpoint-security.html" class="hover:text-cyan-400 transition-colors">
+                                Endpoint Security: Proteção de Dispositivos
+                            </a>
+                        </h2>
+                        <p class="text-gray-400 mb-4">Guia completo sobre Endpoint Security, sua importância na proteção de dispositivos e como implementar soluções eficazes.</p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <span><i class="far fa-calendar mr-2"></i>15 de Março, 2025</span>
+                            <span class="mx-4">•</span>
+                            <span><i class="far fa-clock mr-2"></i>10 min de leitura</span>
+                        </div>
+                    </div>
+                    <div class="text-4xl text-cyber-blue">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <footer class="bg-black py-8 border-t border-cyber-blue/20">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-gray-400">
+                © 2025 Diogo Caldas. Todos os direitos reservados.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            if (menuBtn && mobileMenu) {
+                menuBtn.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('active');
+                    document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+                });
+
+                // Fechar menu ao clicar fora
+                document.addEventListener('click', (e) => {
+                    if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target) && mobileMenu.classList.contains('active')) {
+                        mobileMenu.classList.remove('active');
+                        document.body.style.overflow = '';
+                    }
+                });
+
+                // Fechar menu ao clicar em um link
+                const menuLinks = mobileMenu.querySelectorAll('a');
+                menuLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.remove('active');
+                        document.body.style.overflow = '';
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html> 
